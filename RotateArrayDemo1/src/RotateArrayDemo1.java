@@ -24,7 +24,11 @@ public static void main(String[] args){
 
 public static void rotateArray(int n, int k, int[] arr ){
 	int[] result = new int[n];
-	for(int i = 0; i<k; i++ ){
+	
+	System.arraycopy(arr, n-k, result, 0, k);
+	System.arraycopy(arr, 0, result, k, n-k);
+	System.arraycopy(result, 0, arr, 0, n);
+	/*for(int i = 0; i<k; i++ ){
 		result[i] = arr[n-k+i];
 	}
 	
@@ -34,11 +38,11 @@ public static void rotateArray(int n, int k, int[] arr ){
 	for(int i = k; i<n; i++){
 		result[i] = arr[j];
 		j++;
-	}
+	}*/
 	
-	System.out.println(Arrays.toString(result));
 	
-	System.arraycopy(result, 0, arr, 0, n);
+	
+	//System.arraycopy(result, 0, arr, 0, n);
 	System.out.println("rotated Array : "+Arrays.toString(arr));
 }
 }
