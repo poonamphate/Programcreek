@@ -1,4 +1,5 @@
-/*Rotate an array of n elements to the right by k steps without using arraycopy()*/
+/*Rotate an array of n elements to the right by k steps without using arraycopy()
+ Time complexity is O(n*k)*/
 import java.util.*;
 
 public class RotateArrayDemo2 {
