@@ -1,3 +1,8 @@
+/*Problem Statement : Rotate an array of n elements to the right by k steps.
+ Solution : create a new array and then copy elements to the new array. 
+ Then change the original array by using System.arraycopy()
+ Time and space complexity is O(n)*/
+
 import java.util.*;
 
 public class RotateArrayDemo1 {
