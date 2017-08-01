@@ -1,6 +1,5 @@
+//Explaination https://www.youtube.com/watch?v=TSDl7sRxWdU
 package reverseLinkedList;
-
-
 
 public class LinkedList {
 	 
