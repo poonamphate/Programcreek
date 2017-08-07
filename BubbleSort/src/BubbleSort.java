@@ -1,3 +1,5 @@
+//time complexity of Bubble sort is O(n*n)
+
 import java.util.Arrays;
 
 public class BubbleSort {
