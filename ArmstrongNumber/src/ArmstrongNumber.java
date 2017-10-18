@@ -1,4 +1,4 @@
-
+//Armstrong number is a number that is equal to the sum of cubes of its digits
 public class ArmstrongNumber {
 	public static void main(String[] args){
 		int num = 153;
