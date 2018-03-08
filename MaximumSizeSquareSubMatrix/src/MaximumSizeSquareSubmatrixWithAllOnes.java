@@ -33,6 +33,7 @@ public class MaximumSizeSquareSubmatrixWithAllOnes {
                 else {
                     table[i][j] =Math.min( Math.min(table[i - 1][j - 1], table[i - 1][j]), table[i][j - 1]) + 1;
                     maxSize = table[i][j] > maxSize ? table[i][j] : maxSize;
+                    
                 }
             }
         }
