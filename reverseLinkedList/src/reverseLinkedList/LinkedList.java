@@ -7,8 +7,8 @@ public class LinkedList {
  
     static class Node {
  
-        int data;
-        Node next;
+        private int data;
+        private Node next;
  
         Node(int d) {
             data = d;
@@ -17,7 +17,7 @@ public class LinkedList {
     }
  
     /* Function to reverse the linked list */
-    Node reverse(Node node) {
+    static Node reverse(Node node) {
         Node prev = null;
         Node current = node;
         Node next = null;
@@ -32,7 +32,7 @@ public class LinkedList {
     }
  
     // prints content of double linked list
-    void printList(Node node) {
+    static void printList(Node node) {
         while (node != null) {
             System.out.print(node.data + " ");
             node = node.next;
@@ -40,22 +40,22 @@ public class LinkedList {
     }
  
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-        list.head = new Node(85);
-        Node second = new Node(15);
-        Node third = new Node(4);
-        Node fourth = new Node(20);
+        //LinkedList list = new LinkedList();
+        head = new Node(4);
+        Node second = new Node(3);
+        Node third = new Node(2);
+        Node fourth = new Node(1);
         
         head.next = second;
         second.next = third;
         third.next = fourth;
          
         System.out.println("Given Linked list is");
-        list.printList(head);
-        head = list.reverse(head);
+        printList(head);
+        head = reverse(head);
         System.out.println("");
         System.out.println("Reversed linked list ");
-        list.printList(head);
+        printList(head);
     }
 }
  
