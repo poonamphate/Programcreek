@@ -34,26 +34,24 @@ public class IntersectionOfTwoLinkedList {
 	}
 
 	// Solution 2: Time Complexity: O(n+m); Space Complexity: O(n)
-	public static Node getIntersectionOfListsUsingHash(Node list1head, Node list2head) {
+	public static Node getIntersectionOfListsUsingHash(Node node1, Node node2) {
 
-		if(list1head == null || list2head == null) {
+		if(node1 == null || node2 == null) {
 			return null;
 		}
 
 		HashSet<Node> set = new HashSet<Node>();
-
-		Node temp1 = list1head;
-		while(temp1 != null) {
-			set.add(temp1);
-			temp1 = temp1.next;
+		
+		while(node1 != null) {
+			set.add(node1);
+			node1 = node1.next;
 		}
-
-		Node temp2 = list2head;
-		while(temp2 != null) {
-			if(set.contains(temp2)) {
-				return temp2;
+		
+		while(node2 != null) {
+			if(set.contains(node2)) {
+				return node2;
 			}
-			temp2 = temp2.next;
+			node2 = node2.next;
 		}
 		return null;
 	}
