@@ -41,8 +41,8 @@ public class BinaryTree {
 	}
 	
 	public int maxDepth(Node root){
-		if(root==null)
-	        return 1;
+	    if(root==null)
+	    	return 0;
 		//System.out.println("root.left = "+(""+root.left));
 	    int leftDepth = maxDepth(root.left);
 	    System.out.println("leftDepth = "+leftDepth);
@@ -55,6 +55,6 @@ public class BinaryTree {
 	   // int result = bigger+1;
 	    //System.out.println("Bigger = "+result);
 
-	    return bigger;
+	    return bigger+1;
 	}
 }
